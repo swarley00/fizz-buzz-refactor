@@ -1,23 +1,22 @@
 $(document).ready(function() {
-	var message = prompt("Please enter a number");
-	var inputValue = +message;
-	fizzbuzz(inputValue); // pass the input value from the user's input box to the fizzbuzz function
+	var aNumber = Number(window.prompt("Please enter a number"));
+	fizzbuzz(aNumber); // pass the input value from the user's input box to the fizzbuzz function
 });
 
-function fizzbuzz (max) {
+function fizzbuzz(max) {
 	var myBody = $("body");
-	for (var i; i <= max; i++) {
+	for (var i = 1; i <= max; i++) {
 		if (i%3 === 0 && i%5 === 0) {
-			myBody.append("FizzBuzz");
+			myBody.append(" FizzBuzz" + " ");
 		}
 		else if (i%3 === 0) {
-			myBody.append("Fizz");
+			myBody.append("Fizz" + " ");
 		}	
 		else if (i%5 === 0) {
-			myBody.append("Buzz");
+			myBody.append("Buzz" + " ");
 		}	
 		else {
-			myBody.append(i);
+			myBody.append(i + " ");
 		}
 	}
 }

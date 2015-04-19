@@ -1,6 +1,14 @@
 $(document).ready(function() {
 	var aNumber = Number(window.prompt("Please enter a number"));
-	fizzbuzz(aNumber); // pass the input value from the user's input box to the fizzbuzz function
+	if (isNaN(aNumber)) {
+    	alert("Please use a number.");
+  	} 
+  	else if (aNumber%1 != 0) {
+    	alert("Please use a whole number."); 
+  	}
+  	else {
+     	fizzbuzz(aNumber);
+  	}
 });
 
 function fizzbuzz(max) {
